@@ -1,0 +1,147 @@
+body{
+    background-color: rgb(97, 216, 216);
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px; 
+}
+
+.header{
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: lightgoldenrodyellow;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header h3{
+    text-align: center;
+    font-size: 25px;
+    margin: 10px;
+}
+
+.header:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.gameBoard{
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px; 
+    background-color: bisque;
+    border: 8px solid burlywood;
+    border-radius: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footer{
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.footer button{
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.footer button:hover{
+    background-color: rgb(155, 171, 32);
+    color: white;
+}
+
+.circle{
+    background-color: lightblue; 
+    height: 60px; 
+    width: 60px;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+
+.player0{
+    background-color: white;
+}
+
+.player1{
+    background-color:red;
+}
+
+.player2{
+    background-color: blue;
+}
+
+.shine{
+    background-color: green;
+    color: white;
+    border: 5px solid rgb(0, 83, 0);
+}
+
+.shine.animate {
+    animation-name: headerAnimation;
+    animation-duration: 1s;
+}
+  
+@keyframes headerAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.player0-header h3 {
+  font-size: 24px;
+}
+
+.player1-header{
+    background-color: red;
+    border: solid #8a0500;
+    color: white;
+}
+
+.player2-header{
+    background-color: blue;
+    border: 5px solid #002382;
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+
+    .gameBoard{
+        margin: 25px;
+        padding: 10px;
+        grid-gap: 5px; 
+        border-radius: 40px;
+    }
+
+    .circle{
+        height: 50px; 
+        width: 50px;
+        border: 2px solid black;
+    }
+
+    .header h3{
+        text-align: center;
+        font-size: 18px;
+        margin: 10px;
+    }
+
+    .footer button{
+        margin: 10px;
+        font-size: 15px;
+        border-radius: 10px;
+    }
+}
